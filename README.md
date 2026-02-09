@@ -10,14 +10,23 @@
 
 # SOFTWARES AND DATABASES
 
-- XAMPP (APACHE + SQL + PHP)
+- **XAMPP (APACHE + SQL + PHP)**
   - APACHE - SERVICES
   - SQL - DATABASE
   - PHP - INTERPRETER
   -  X - ANY PLATFORM (Windowns, Linux, Mac)
 
-- DBEAVER - DATABASE MANAGER
-- DATABASES USED: MySQL, MariaDB, Sqlite, FireBird
+- **DBEAVER** - DATABASE MANAGER
+- **DATABASES:**
+From this set of database the only one not used was SQL Server due to it's complex install.
+
+Database|Type|Use|Strenghts|Limitation|
+---|---|---|---|---|
+Sqlite|File-based|Small apps and mobile|Easy install, no server, lighther|fewer advanced features|
+Firebird|Relational(Client server)|Small to Medium apps|Light with more funcionalities|Requires an easy setup|
+MySql/MariaDB|Relational(Server-based)|Scalable systems|Fast, widely supported easy to manage with more features|Requires a considered setup|
+SQL Server| Relational(Enterprise)|Large Systems|Advanced security analitics and more features|Requires a heavy and complex setup and licensing.
+
 
 # LANGUAGE CATEGORIES
 SQL is divided into several sublanguages, each responsible for a specific aspect of database management. Understanding these categories helps clarify what kind of operation is being performed and its impact on the database. 
