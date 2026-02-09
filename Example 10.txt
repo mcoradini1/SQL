@@ -43,5 +43,11 @@ limit 2;                                                                    -- L
 truncate table courses;                                                                                   -- command 10
 truncate courses;                                                           -- delete all lines (keep structure)
 ------------------------------------------------------------------------------------------------------------------------
+The UPDATE command is used to modify existing rows (tuples) in a table. It allows changing the value of one or more
+columns in records that already exist in the database. When used with a WHERE clause, UPDATE targets specific rows,
+ensuring that only the intended data is modified. If the WHERE clause is omitted, all rows in the table will be
+updated, which can cause serious data integrity issues.
 
+Because of this, the UPDATE command must be used carefully, especially in databases containing production or
+critical data.
 ------------------------------------------------------------------------------------------------------------------------
