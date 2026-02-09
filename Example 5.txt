@@ -1,0 +1,22 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 5: Adding Columns Using FIRST, AFTER, and Default Position
+In this example, different ways of adding a new column to the people table are demonstrated.
+Depending on the syntax used, a column can be added at the end of the table, after a specific column,
+or as the first column.
+------------------------------------------------------------------------------------------------------------------------
+
+alter table people                                              -- command 1 (add to the end)
+add column profession varchar(10);
+
+alter table people                                              -- command 2 (delete column)
+drop column profession;
+
+alter table people                                              -- command 3 (add it after name)
+add column profession varchar(10) after name;
+
+alter table people                                              -- command 4 (add it in first)
+add nat_insurance int first;
+
+------------------------------------------------------------------------------------------------------------------------
+Column don't need to be typed
+------------------------------------------------------------------------------------------------------------------------

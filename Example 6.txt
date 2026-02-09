@@ -1,0 +1,25 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 6: In this example, the MODIFY clause is used to change the data type and constraints of an existing column
+in the people table. Because the table already contains data, adding or modifying constraints can lead to errors
+if existing rows do not comply with the new rules.
+------------------------------------------------------------------------------------------------------------------------
+
+
+alter table people                                              -- command 1
+modify column profession varchar(20) not null;                  -- Wrong
+modify column profession varchar(20) not null default '';       -- Correct way to do
+
+
+------------------------------------------------------------------------------------------------------------------------
+Detailed Explanation:
+
+MODIFY allows changing a column’s data type, size, and constraints.
+Adding a NOT NULL constraint on a column that already exists may cause an error if any row contains NULL values.
+Since the column was added after the table already had data, existing rows may contain NULL in the profession column.
+
+Defining a DEFAULT value ensures that:
+existing NULL values can be replaced,
+future inserts do not violate the NOT NULL constraint.
+Using a default empty string ('') is a common workaround when a meaningful default value is not available.
+As in the previous example, column position does not need to be specified when modifying a column.
+------------------------------------------------------------------------------------------------------------------------

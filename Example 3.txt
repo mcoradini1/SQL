@@ -1,0 +1,52 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 3: Using the database created on example 2, and adding more constraints and best practices. Using more
+appropriate data type for each case.
+------------------------------------------------------------------------------------------------------------------------
+
+use register;                  -- command 1
+
+create table people (          -- command 2
+
+id int not null auto_increment,
+`name` varchar(30) NOT NULL,
+`date_of_birth` date,
+`sex` enum ('M', 'F'),                            -- note 4 Enum (Can only use M or F)
+`weight` decimal(5,2),                            -- note 5 five spaces, and two after the comma (ex: 102,30)
+`height` float(3,2),                              -- note 6  three spaces and two after the comma (ex: 1,99)
+`nationality` varchar(20) default 'Brazil',
+primary key (id)                                  -- note 8: Setting primary key
+);
+
+describe register;              -- command 3 (can also be desc register;)
+
+show tables;                    -- command 4
+
+
+------------------------------------------------------------------------------------------------------------------------
+Detailed Explanation of Changes and Constraints:
+
+Constraints: It is important to note that constraints are written before or after the data type depending on the
+constraint, they may be written in uppercase or lowercase, and they are not separated by commas. Instead, constraints
+are separated by spaces within the column definition.
+
+NOT NULL Constraints: Fields such as name and id marked as NOT NULL to guarantee that essential information is always
+provided. The id will automatically receive value due to auto_increment.
+
+AUTO_INCREMENT: automatically generates a new value for every inserted row, preventing duplication.
+
+DEFAULT: Automatically assigns a predefined value to the inserted row.
+
+Date of Birth Instead of Age: Storing date_of_birth allows the system to calculate age dynamically, ensuring
+accuracy over time.
+
+Primary Key (id) - Uniquely identifies each record in a table. It must contain unique values and cannot
+be NULL, ensuring that every row can be reliably referenced.
+
+Additional Note:
+
+Backticks (`) are used in this example only to demonstrate that SQL allows identifiers (such as database or table names)
+to be enclosed in them. Their usage is optional in this context and not required unless dealing with reserved words or
+special characters.
+
+------------------------------------------------------------------------------------------------------------------------
+

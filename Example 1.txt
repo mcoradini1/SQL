@@ -1,0 +1,31 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 1: Basic Database and Table Creation
+------------------------------------------------------------------------------------------------------------------------
+
+This example demonstrates the fundamental SQL commands used to create a database, select it for use, and define a table
+to store basic personal information. Although attributes such as age are typically calculated from a date of birth
+rather than stored directly in a database, this example intentionally uses the TINYINT data type to illustrate its usage
+in a simple and practical context.
+
+create database register;      -- command 1
+
+use register;                  -- command 2
+
+create table people (          -- command 3
+name varchar(30),
+age tinyint(3),
+sex char (1),
+weight float,
+height float,
+nationality varchar(20),
+); default charset = utf8;     -- note 1: add charset to accept latin characters.
+
+
+------------------------------------------------------------------------------------------------------------------------
+Additional Notes:
+
+register is the name of the database.
+A database is composed of tables; tables store records; and each record consists of fields.
+The semicolon (;) indicates the end of an SQL command.
+This example represents a simple table definition intended for demonstration purposes.
+------------------------------------------------------------------------------------------------------------------------

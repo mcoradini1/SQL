@@ -1,0 +1,13 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 2: Deleting the example database  and creating a database with constraints
+------------------------------------------------------------------------------------------------------------------------
+
+drop database register;        -- command 1 (delete database)
+
+create database register       -- command 2 (create database with utf8 to enable latin characters)
+default character set utf8
+default collate utf8_general_ci;
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------

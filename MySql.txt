@@ -1,0 +1,61 @@
+bancos mais simples, com objetivos simples.
+app -> tem que mandr para o banco de dados...
+bd -> pode estar na pasta ou em outro local (nao precisa estar na mesma basta do app)
+app e bd fazem trocas...
+sqlite - e um arquivo local, ele permite conexao direta com o servidor... tem a premissa de ser algo mais simples
+vem aqui pega e vai embora kkkk ele e simples 1 por vez...
+
+DBEAVER e um geernciador de banco de dados...
+
+STACK OVERFLOW
+CLAUDE E GPT
+
+XAMPP (APACHE + SQL + PHP)
+APACHE - SERVIDOR SERVICES
+SQL - DATABASE SERVICE
+INTERPRETER PHP
+X - ANY PLATFORM
+
+MySql follows all the defaults
+database
+especification languague
+manager system
+aditional systems
+
+by definition
+DDL - Definition (create table, databases, anything by definition)
+DML - Manipulation (alterate data)
+DQL - Query, solicitar anything
+DCL - Control, which usserr can use the db
+DTL - Transaction, any solicitation that can be done to the dataase, following, durability, isolating, consistency and atomicit (DICA) thats the good things..
+every data need to stay durable, isolate, if i have 2 transaction at same time, they cannot affect it oter, everything needs to to be consistenct, bring the db from
+a consistent to another consistent, every transaction needs to be atomic, or everythig happen or nothing...
+
+'' I CAN USE THEM TO TEXT
+I CAN USE `` FOR THE TABLE ROWS
+
+
+
+
+We have database -> Tables -> fields also called by collumn
+
+
+
+
+#Commands DDL - Define structures
+Create Table
+Create Database
+Alter table
+Drop table
+
+#Commands DML - Manipulate
+Insert into
+truncate, trunc
+update
+delete
+
+
+
+
+Manipulating lines/tuples, insert into is to add lnies... To modify a line we use the command update, it will change
+things in one line only...

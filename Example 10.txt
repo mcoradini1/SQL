@@ -1,0 +1,47 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 10: Fix the errors
+------------------------------------------------------------------------------------------------------------------------
+
+insert into courses values                                                                                -- command 1
+('1', 'HTML4', 'HTML course', '40', '37', '2022'),
+('2', 'PHM', 'PHP basics', '60', '55', '2025'),
+('3', 'Cooking', 'Basic cooking for programming', '30', '29', '2032'),
+('4', 'Jarvas', 'Java Language', '45', '40', '2026'),
+('5', 'Cooking 2', 'Intermediate cooking for programming', '30', '29', '2032'),
+('6', 'Cooking 3', 'Advanced cooking for programming', '30', '29', '2032'),
+
+update courses                                                                                            -- command 2
+set name = 'HTML5',                                                                -- (set name to HTML5 where id is 1).
+where id = '1';
+
+update courses                                                                                            -- command 3
+set name = 'PHP', year = '2024'
+where id = '2';
+
+update courses                                                                                            -- command 4
+set name = 'Java', time_courses = 60, total_classes = 30, year = '2025'
+where id = '4'
+
+update courses                                                                                            -- command 5
+set year = '2060', total_classes = '800'                                   -- It will change more than 1 line, software
+where year = 2032;                                                            usually lock it for data safety.
+
+select * from courses;                                                                                    -- command 6
+
+update courses                                                                                            -- command 7
+set year = '2032', total_classes = '0'
+where year = 2060
+limit 1;                                                                    -- I can limit for safety.
+
+delete from courses                                                                                       -- command 8
+where id = '3';
+
+delete from courses                                                                                       -- command 9
+where year = '2032';
+limit 2;                                                                    -- Limit for only 2 lines
+
+truncate table courses;                                                                                   -- command 10
+truncate courses;                                                           -- delete all lines (keep structure)
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------

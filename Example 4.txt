@@ -1,0 +1,47 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 4: Adding information to the table people, using 5 different ways of Insert into.
+------------------------------------------------------------------------------------------------------------------------
+
+insert into people                                              -- command 1 (first way)
+(id, name, birthday, sex, weight, height, nationality)
+values
+('1' 'Marlon' '1995-08-13' 'M' '90.12' ,'1.95', 'Italy');
+
+
+insert into people                                              -- command 2 (second way)
+(name, birthday, sex, weight, height, nationality)
+values
+('Susan' '1996-05-28' 'F' '50.12' ,'1.64', 'Portugal');
+
+
+insert into people                                              -- command 3 (third way)
+(id, name, birthday, sex, weight, height, nationality)
+values
+(DEFAULT, 'Marine' '1999-01-28' 'F' '60.25' ,'1.70', 'Italy');
+
+
+insert into people                                              -- command 4 (fourth way)
+values
+(DEFAULT, 'Allan' '1990-01-17' 'M' '85' ,'1.80', 'Mongolia');
+
+
+insert into people                                              -- command 5 (fifth way)
+values
+(DEFAULT, 'Mario' '1989-01-21' 'M' '72' ,'1.87', 'Portugal'),
+(default, 'Marianne' '1975-01-22' 'F' '58.11' ,'1.70', 'Italy'),
+(DEFAULT, 'Adrian' '1995-01-21' 'M' '50.12' ,'1.90', 'Italy');
+
+select * from people;                                            -- command 6 (select/show everyone in people)
+
+
+------------------------------------------------------------------------------------------------------------------------
+Detailed Explanation:
+
+1 - Inserting a record by explicitly specifying all columns, including the id.
+2 - Inserting a record while omitting the id column, allowing the database to assign it automatically.
+3 - Using the DEFAULT keyword to let the database generate the default value for the id.
+4 - Inserting values without listing column names, assuming the values are provided in the exact order
+defined in the table schema.
+5 - Inserting multiple records in a single INSERT statement, which is more efficient than inserting rows one by one.
+
+------------------------------------------------------------------------------------------------------------------------
