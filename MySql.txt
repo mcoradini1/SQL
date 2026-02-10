@@ -1,6 +1,13 @@
 STACK OVERFLOW
 CLAUDE E GPT
 
+
+damp data
+dump structure
+dump both
+
+
+
 We have database -> Tables -> fields also called by collumn
 
 #Commands DDL - Define structures
@@ -15,6 +22,12 @@ Insert into
 truncate, trunc
 update
 delete
+select (some autors, but prefer to consider it as DQL, because it does not manipulate data.)
+
+#Commands DQL - Query
+select
+
+
 
 
 

@@ -1,0 +1,70 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 12: Creating database courses:
+------------------------------------------------------------------------------------------------------------------------
+create table courses (
+id int not null auto_increment,
+course_name varchar(30) not null,
+total_classes int,
+year_course year,
+primary key (id)
+);
+
+INSERT INTO courses
+(course_name, total_classes, year_course)
+VALUES
+
+('PHP Beginner 1', 30, 2020),
+('PHP Beginner 2', 35, 2021),
+('PHP Intermediate 1', 45, 2022),
+('PHP Intermediate 2', 50, 2023),
+('PHP Advanced 1', 55, 2024),
+('PHP Advanced 2', 60, 2025),
+('JAVA Beginner 1', 40, 2020),
+('JAVA Beginner 2', 35, 2021),
+('JAVA Intermediate 1', 50, 2022),
+('JAVA Intermediate 2', 55, 2023),
+('JAVA Advanced 1', 60, 2024),
+('JAVA Advanced 2', 58, 2026),
+('Word Beginner 1', 20, 2020),
+('Word Beginner 2', 25, 2021),
+('Word Intermediate 1', 30, 2022),
+('Word Intermediate 2', 35, 2023),
+('Word Advanced 1', 40, 2024),
+('Word Advanced 2', 45, 2025),
+('Excel Beginner 1', 30, 2020),
+('Excel Beginner 2', 35, 2021),
+('Excel Intermediate 1', 45, 2022),
+('Excel Intermediate 2', 50, 2023),
+('Excel Advanced 1', 55, 2024),
+('Excel Advanced 2', 60, 2026),
+('Algorithm Beginner 1', 40, 2020),
+('Algorithm Beginner 2', 45, 2021),
+('Algorithm Intermediate 1', 50, 2022),
+('Algorithm Intermediate 2', 55, 2023),
+('Algorithm Advanced 1', 60, 2024),
+('Algorithm Advanced 2', 58, 2027),
+('Photoshop Beginner 1', 25, 2020),
+('Photoshop Beginner 2', 30, 2021),
+('Photoshop Intermediate 1', 40, 2022),
+('Photoshop Intermediate 2', 45, 2023),
+('Photoshop Advanced 1', 50, 2024),
+('Photoshop Advanced 2', 55, 2025),
+('Hardware and Software Beginner 1', 35, 2021),
+('Hardware and Software Beginner 2', 40, 2022),
+('Hardware and Software Intermediate 1', 50, 2023),
+('Hardware and Software Intermediate 2', 55, 2024),
+('Hardware and Software Advanced 1', 60, 2025),
+('Hardware and Software Advanced 2', 58, 2028),
+('C# Beginner 1', 40, 2021),
+('C# Beginner 2', 45, 2022),
+('C# Intermediate 1', 50, 2023),
+('C# Advanced 1', 60, 2024),
+('HTML5 Beginner 1', 25, 2020),
+('HTML5 Beginner 2', 30, 2021),
+('HTML5 Intermediate 1', 40, 2022),
+('HTML5 Intermediate 2', 45, 2023),
+('HTML5 Advanced 1', 50, 2024),
+('HTML5 Advanced 2', 55, 2026);
+
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------

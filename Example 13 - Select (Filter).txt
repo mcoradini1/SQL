@@ -1,0 +1,30 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 13: SELECT (BASIC FILTERING)
+------------------------------------------------------------------------------------------------------------------------
+
+select * from courses;                          -- command 1 (ID ascendant order)
+
+select * from courses;                          -- command 2 (name ASCENDANT order)
+order by name;
+
+select * from courses;                          -- command 3 (name DESCENDANT order)
+order by name DESC;
+
+Select * from courses                           -- command 4 (name ASCENDANT order)
+order by name ASC;
+
+select course_name, year_course from courses    -- command 5 (just name and year)
+order by course_name;
+
+select year_course, course_name from courses    -- command 6 (just year and name)
+order by course_name;
+
+select year_course, course_name from courses    -- command 7 (sorting by name, and then year)
+order by course_name, year_course;
+
+------------------------------------------------------------------------------------------------------------------------
+* Means to select all the columns
+* Command 5 and 6 are similar, but the result is shown in that exactly order.
+* The command SELECT is the command that mostly change from type of database to another. Considering SQL Server,
+Oracle and more...But aggregation function works in all (but some has more detailed then others).
+------------------------------------------------------------------------------------------------------------------------

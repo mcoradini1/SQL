@@ -28,4 +28,6 @@ register is the name of the database.
 A database is composed of tables; tables store records; and each record consists of fields.
 The semicolon (;) indicates the end of an SQL command.
 This example represents a simple table definition intended for demonstration purposes.
+
+`` oficial syntax uses it; Easier to type without it. using it i can add spaces instead of _ (`course name`)
 ------------------------------------------------------------------------------------------------------------------------

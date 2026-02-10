@@ -1,0 +1,30 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 15: LIKE, WILD CARDS (% AND _)
+------------------------------------------------------------------------------------------------------------------------
+select * from courses                               -- command 1 (ID ascendant order)
+where course_name LIKE 'P%';                        -- Words STARTING with 'P' (using wild card %)
+
+select * from courses                               -- command 2 (ID ascendant order)
+where course_name LIKE '%1';                        -- Words FINISHING with '1' (using wild card %)
+
+select * from courses                               -- command 3 (ID ascendant order)
+where course_name LIKE '%A%';                       -- Has 'A' in any location
+
+select * from courses                               -- command 4 (ID ascendant order)
+where course_name NOT LIKE '%A%';                   -- HAS NO 'A' in any location
+
+select * from courses                               -- command 5 (ID ascendant order)
+where course_name LIKE 'ph%1';                      -- Starts with ph and ends with 1
+
+select * from courses                               -- command 6 (ID ascendant order)
+where course_name LIKE 'p__t%';                     -- starts with p(two wild _) a 'T' and wild again
+
+select * from workers                               -- command 7 (look for surname matos)
+where name LIKE '%matos%';
+
+select * from workers                               -- command 8 (best way to guarantee there is something before matos)
+where name LIKE '%_matos%';
+
+------------------------------------------------------------------------------------------------------------------------
+% Wild card, it will substitute none or various characters. its position is important.
+------------------------------------------------------------------------------------------------------------------------

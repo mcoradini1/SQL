@@ -1,0 +1,24 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 1:
+------------------------------------------------------------------------------------------------------------------------
+- Separate from list workers all the female workers
+
+- List 1 jan 2000 until 30 dez 2015
+
+- men in programming
+
+- all women born in brazil, with first letter
+
+- Name and nationality of men that has Ribeiro in name, was not born in Brazil, weight less 100
+
+- higher high between mens in Italy
+
+- average of weight of men
+
+- lowest weight of women born between 01/01/1990 to 31/dez/2000 born in italy.
+
+- how many women has more then 1,90 height
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------

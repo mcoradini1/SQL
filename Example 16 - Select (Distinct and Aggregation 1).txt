@@ -1,0 +1,22 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 16: DISTINCT AND AGGREGATION (COUNT, MAX, MIN, SUM, AVG)
+------------------------------------------------------------------------------------------------------------------------
+
+select DISTINCT nationality from workers;           -- command 1
+
+select COUNT(*) from workers;                       -- command 2 (COUNTING registers)
+select * from coursers where year_course > 2024;
+
+select MAX(year_course) from courses;       -- command 3 (getting the MAX value)
+
+select course_name, MIN(total_classes) from courses where year_course = '2023';     -- command 4 (getting the MIN value)
+
+
+select SUM(total_classes) from courses where year_course > 2024;      -- command 5 (Summing all values)
+
+select AVG(total_classes) from courses where year_course > 2024;      -- command 6 (Doing the average)
+
+------------------------------------------------------------------------------------------------------------------------
+* it will take one of each type. (just distinguish, not group)
+* aggregation function COUNT, MAX, MIN, SUM AND AVG
+------------------------------------------------------------------------------------------------------------------------

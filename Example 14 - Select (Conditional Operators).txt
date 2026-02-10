@@ -1,0 +1,34 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 14: SELECT (CONDITIONAL OPERATORS)
+------------------------------------------------------------------------------------------------------------------------
+select * from courses                           -- command 1 (using a specific year)
+where year_course = '2022'                      -- conditional operator
+order by course_name;
+
+select course_name, total_classes from courses         -- command 2 (filter by year, not showing it)
+where year_course = '2022'
+order by course_name;
+
+select * from courses                           -- command 3 (using a specific year)
+where year_course <= '2022'                     -- conditional operators (!= or <>, <=, >=, <, >)
+order by course_name;
+
+select * from courses                           -- command 4 (using a specific year)
+where year_course between 2020 and 2021         -- conditional operator BETWEEN (between these)
+order by year_course desc, course_name asc;
+
+select * from courses                           -- command 5 (using a specific year)
+where year_course in (2015, 2020, 2028)         -- conditional operator IN (only these)
+order by year_course desc, course_name asc;
+
+select * from courses                                           -- command 6 (using a specific year)
+where total_classes > 40 AND year_course < 2022                 -- using AND
+order by year_course;
+
+select * from courses                                           -- command 7 (using a specific year)
+where total_classes > 40 OR year_course < 2022                  -- using OR
+order by year_course;
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
