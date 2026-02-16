@@ -1,11 +1,9 @@
 STACK OVERFLOW
 CLAUDE E GPT
 
-
 damp data
 dump structure
 dump both
-
 
 We have database -> Tables -> fields also called by collumn
 
@@ -26,72 +24,5 @@ select (some autors, but prefer to consider it as DQL, because it does not manip
 #Commands DQL - Query
 select
 
-
-
-Relational Databases
-
-
-
-
-worker -> watch -> course   (there's a relationship) (watch is the relationship
-with that we create an diagram entity/relation (DER)
-It will show the relationship between than...
-for simple tables we don't need that (just cases that connects tables...)
-
-
-
-n worker -> watch -> n course
-* workers can watch (more them 1 course each - n)
-* courses can be watched by workers (more them 1 workr for each - n)
-* cardinality (simple, multiple, null, min, max, strong, weak)
-this relationship is n by n (loads for loads)
-
-example (relationshio)
-men 1 merry women 1 (1 men 1 women)
-relationship one by one
-
-1 worker take care n dependents
-
-the dependents can only have 1 worker
-one per loads
-
-
-client buy product
-client can buy loads of products
-product can be bought by loads of clients
-loads for loads
-
-Primary Keys and Foreign Key (FK)
-
-
-ONE BY ONE
-Need to check if they need it. (if I need them separate i continue...)
-men -> merry -> women
-
-husband - national insurance, name
-wife - national insurance, name
-
-* we choose a dominating (in this case using men)
-* we get women Primary key and thransfer to men as FK (national insurance from women)
-* we keep in the left the dominanting
-
-one FOR LOADS
-worker -> take care -> dependents
-
-worker - national insurance,name, speciality
-dependant - national insurance, name
-
-*take the PK from side 1 and put on loads as FK
-
-Loads for loads
-we need to dismember to more then one one for loads products
-
-Client - buy - products
-
-cleint - narional insurance, name, adress
-product - id, name, price, fabricated by who
-
-buy will become entity
-buy  id_buy, data, dorma de pagamento
 
 
