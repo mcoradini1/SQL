@@ -18,5 +18,6 @@ select AVG(total_classes) from courses where year_course > 2024;      -- command
 
 ------------------------------------------------------------------------------------------------------------------------
 * it will take one of each type. (just distinguish, not group)
+* distinct will only take one of each.
 * aggregation function COUNT, MAX, MIN, SUM AND AVG
 ------------------------------------------------------------------------------------------------------------------------

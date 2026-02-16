@@ -1,0 +1,47 @@
+------------------------------------------------------------------------------------------------------------------------
+Example 18: Select (Group)
+------------------------------------------------------------------------------------------------------------------------
+select total_classes from courses
+group by total_classes;
+
+
+select total_classes, COUNT(course_name) from courses
+group by total_classes;
+
+
+select * from courses where total_classes = 30;
+
+
+
+select total_classes from courses where year_course > '2020'
+group by total_classes;
+
+
+select total_classes, COUNT(*) from courses where year_course > '2020'
+group by total_classes;
+
+
+select total_classes, COUNT(*) from courses where year_course > '2020'
+group by total_classes
+having COUNT(*) > 3;
+
+
+select year_course , count(*) from courses
+group by year_course
+having year_course >= 2022;        -- can only use the same as here
+order by count(*) desc
+
+
+
+select total_classes, count(*) from courses
+where year_course > 2020
+group by total_classes
+having total_classes > (select avg(total_classes) from courses);
+
+
+------------------------------------------------------------------------------------------------------------------------
+Additional Notes:
+
+
+------------------------------------------------------------------------------------------------------------------------
+grouping

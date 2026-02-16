@@ -1,0 +1,60 @@
+------------------------------------------------------------------------------------------------------------------------
+Exercise 1:  Using database workers produce the bellow commands.
+------------------------------------------------------------------------------------------------------------------------
+
+Get all female workers
+
+select * from workers
+where sex = 'F';
+
+------------------------------------------------------------------------------------------------------------------------
+- List everyone that is born from 1/01/1995 to 30/12/2010
+
+select * from workers
+where data_of_birth between '1995/01/01' and '2010/12/30';
+
+------------------------------------------------------------------------------------------------------------------------
+- Men in Engineering
+
+select * from workers
+where sex = 'M' and profession = 'engineer';
+
+------------------------------------------------------------------------------------------------------------------------
+- All women born in Italy, with first letter 'F':
+
+select * from workers
+where sex = 'F' and nationality = 'Italian' and name like 'f%';
+
+
+------------------------------------------------------------------------------------------------------------------------
+- Name of men that has Ribeiro in name, is brazilian,and weight less 100:
+
+select name from workers
+where name like '%ribeiro%' and nationality = 'brazilian' and weight < 100 and sex = 'M';
+
+------------------------------------------------------------------------------------------------------------------------
+- higher high between mens in Italy:
+
+select max(height) from workers
+where sex = 'M' and Nationality = 'Italian'
+
+------------------------------------------------------------------------------------------------------------------------
+- Average of weight of men:
+
+select avg(weight) from workers
+where sex = 'M'
+
+------------------------------------------------------------------------------------------------------------------------
+- Lowest weight of women born between 01/01/1980 to 31/12/2000:
+
+select min(weight) from workers
+where sex = 'F' and data_of_birth between '1980/01/01' and '2000/12/31';
+
+------------------------------------------------------------------------------------------------------------------------
+- How many women has more than 1,70 height:
+
+select * from workers
+where sex = 'F' and height > 1.7;
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------

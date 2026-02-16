@@ -1,14 +1,14 @@
-# SQL
-# SUMMARY
+# Summary
 - [ ] Simple Explanation
 - [x] Primitive types
 - [x] Softwares and Databases
 - [x] Language Categories
-- [ ] Language Categories Examples
+- [ ] Relational DataBase (RDBMS)
+- [ ] Damp (Saving)
 - [ ] All Examples
 
 
-# SOFTWARES AND DATABASES
+# Softwares and Databases
 
 - **XAMPP (APACHE + SQL + PHP)**
   - APACHE - SERVICES
@@ -95,25 +95,26 @@ DDL commands are used to create, alter, and remove database objects such as data
 1. Critical for financial and critical systems
 
 
+---
 
+# Primitive Types
 
-
-# PRIMITIVE TYPES
-
+---
 ## Numerical:
 
-### Integer: 
+
+### Integer:
 TinyInt(3bytes), SmallInt, Int(11bytes), MediumInt, BigInt: They store more or less information.
 ### Real: 
 Decimal, Float, Double, Real
 ### Logic: 
 Bit and Boolean (yes/no) (1/0)
 
-
+---
 ## Date and Time:
 Date, DateTime, TimeStamp, Time, Year
 
-
+---
 ## Literal
 ### Characters: 
 Char and VarChar; Char will store the full characters even the empty ones, what is diferent from
@@ -121,18 +122,52 @@ VarChar. Char(30) would store the name Maria and 25 empty spaces.
 ### Text: 
 TinyText, Text, MediumText, LongText. (Used to prepare texts similar, they can store more or less info.)
 
-
 ### Binary: 
 TinyBlob, Blob, MediumBlob and LongBlob (They can store even pictures, it's not something that DBs
 usually do.
 
-
 ### Collection:
 Enum, Set (They set variables that can be used)
 
+---
 
 ## Spacial
 Geometry,Point Polygon, MultiPo (They are not the focus now)
 
 
+---
+# Relational DataBase (RDBMS)
+In databases, relationships between tables are created through a structured model. The classic approach is the 
+**Entity–Relationship Diagram (ERD)** , although newer paradigms like **object‑oriented modelling (OOP)** also exist, 
+even if they’re not as widely used for database design yet.
+
+The **ERD** is used to define relationships between tables in a database. Entities like Courses or Workers contain 
+attributes such as **name or date_of_birth**, which store the actual data. Each record (tuple) must have a primary key to 
+uniquely identify it. These keys are essential because they allow entities to connect and form meaningful relationships 
+within the database.
+
+## Cardinality:
+
+Cardinality describes how many records in one table relate to records in another table. It defines the type of relationship between entities.
+The main types are:
+
+- **1:1 (one‑to‑one)** – one record matches exactly one record.
+- **1:n (one‑to‑many)** – one record connects to many records.
+- **n:m (many‑to‑many)** – many records connect to many records (usually via a junction table).
+
+Other types not vastly considered yet:
+- **Null cardinality** -
+A relationship that is optional, the entity can exist without a related record. 
+- **Minimum cardinality (min)** - 
+The minimum number of relationships required (usually 0 or 1).
+- **Maximum cardinality (max)** -
+The maximum number of relationships allowed (1, N, or M).
+- **Strong cardinality** -
+A relationship where the child depends on the parent (like strong/identifying).
+The parent’s key becomes part of the child’s key.
+- **Weak cardinality** -
+A relationship where the child does not depend on the parent.
+The child has its own primary key.
+
+## Examples:
 
