@@ -170,4 +170,31 @@ A relationship where the child does not depend on the parent.
 The child has its own primary key.
 
 ## Examples:
+### 1:1 (one-to-one)
+It is important to check if it is possible to have everything in one table in (this case do not need to relate to them) in case it's still 
+necessary to have them separated, we follow:
+1. Choose one to be the dominant (the example considers the man)
+2. We transfer the woman's primary key (PK) as a Foreign Key (FK) in Men.
+3. It is important to always leave the dominant to the left side of the diagram.
+
+<img width="564" height="397" alt="1 to 1" src="https://github.com/user-attachments/assets/b8e450d6-dfe6-4bd8-bb65-3c902f325dba" />
+
+### 1:n (one-to-many)
+In this case, let's consider the Workers and Course databases used in the examples. Our assumption for this is that each worker can only Watch one movie. 
+1.  We take the PK for the **side one** and transfer as FK to the **many side**
+
+
+<img width="327" height="228" alt="1 TO N" src="https://github.com/user-attachments/assets/5e95b9b0-70b7-4407-b0c2-42c9a0da053f" />
+
+### n:m (many-to-many)
+We follow the same example above, but in a more realistic way: each worker can watch as many courses as they want. To that work its important to:
+1. Dismember to 1:1 on both sides
+2. where the central relationship between them will become an entity
+3. Entity-Relationship will receive both PK as FK.
+4. Acts like 1:n case then
+
+
+<img width="330" height="219" alt="M to N" src="https://github.com/user-attachments/assets/c223e966-9f12-4474-9ebd-12363ba98333" />
+
+
 
