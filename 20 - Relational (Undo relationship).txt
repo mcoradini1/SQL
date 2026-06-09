@@ -1,0 +1,58 @@
+------------------------------------------------------------------------------------------------------------------------
+Exercise 21:  Inner and Outer join for a case 1:n (Workers preferred course, each worker can only prefer one course,
+but one course can have more than 1 workers)
+------------------------------------------------------------------------------------------------------------------------
+WITHOUT ON
+------------------------------------------------------------------------------------------------------------------------
+-- (this join will show everyperson with every course) - (wrong for this situation)
+
+select workers.name, workers.course_decided, courses.course_name, courses.year_course
+from workers join courses;
+
+------------------------------------------------------------------------------------------------------------------------
+WITH ON
+------------------------------------------------------------------------------------------------------------------------
+-- (this will only show the students that have something on INNER JOIN (don't need to specify inner)
+
+select workers.name, workers.course_decided, courses.course_name, courses.year_course
+from workers join courses
+on courses.id = workers.course_decided;
+
+
+------------------------------------------------------------------------------------------------------------------------
+SPECIFYING INNER JOIN (NO CHANGE)
+------------------------------------------------------------------------------------------------------------------------
+
+select workers.name, courses.course_name, courses.year_course
+from workers inner join courses
+on courses.id = workers.course_decided
+order by workers.name;
+
+------------------------------------------------------------------------------------------------------------------------
+NICKNAME (AS)
+------------------------------------------------------------------------------------------------------------------------
+
+select w.name, c.course_name, c.year_course
+from workers as w inner join courses as c
+on c.id = w.course_decided
+order by w.name;
+
+------------------------------------------------------------------------------------------------------------------------
+LEFT OUTER JOIN
+------------------------------------------------------------------------------------------------------------------------
+-- preference to the left table (workers in this case) (can also be used left join)
+
+select w.name, c.course_name, c.year_course
+from workers as w left outer join courses as c
+on c.id = w.course_decided
+order by w.name;
+
+------------------------------------------------------------------------------------------------------------------------
+RIGHT OUTER JOIN
+------------------------------------------------------------------------------------------------------------------------
+-- preference to the right table (courses in this case) (can also be used as right join)
+
+select w.name, c.course_name, c.year_course
+from workers as w right outer join courses as c
+on c.id = w.course_decided
+order by w.name;

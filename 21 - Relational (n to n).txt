@@ -1,0 +1,43 @@
+------------------------------------------------------------------------------------------------------------------------
+Exercise 23: Now considering a case of n:n using the Workers and Courses tables.
+n workers -> watch <-n course
+
+create 2 relationships 1:n
+
+workers <- n watched n-> course
+
+------------------------------------------------------------------------------------------------------------------------
+CREATING ENTITY WATCH (TO RECEIVE BOTH FKs)
+------------------------------------------------------------------------------------------------------------------------
+
+create table watch(                            -- command 1 Creating the table, with some 'wrong' columns inside.
+id int not null auto_increment,
+date_start date,
+idworkers int,
+idcourses int,
+primary key (id)
+
+) default charset = utf8;
+
+alter table watch                           -- command 2 fixing the mistake in the name
+change column idworkers fk_workers int;
+
+alter table watch                           -- command 3 fixing the mistake in the name
+change column idcourses fk_courses int;
+
+------------------------------------------------------------------------------------------------------------------------
+SENDING PRIMARY KEY FOR THE SIDE MANY (WORKERS, COURSES) -> (WATCH)
+------------------------------------------------------------------------------------------------------------------------
+
+alter table watch                                       command 4: FK for workers
+add constraint fk_watch_workers
+foreign key (fk_workers) references workers(id);
+
+alter table watch                                       command 5: FK for courses
+add constraint fk_watch_courses
+foreign key (fk_courses) references courses(id);
+
+
+------------------------------------------------------------------------------------------------------------------------
+ADDITIONAL INFORMATION
+------------------------------------------------------------------------------------------------------------------------

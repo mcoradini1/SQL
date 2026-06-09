@@ -1,0 +1,38 @@
+------------------------------------------------------------------------------------------------------------------------
+Exercise 12:  Undo Relationship between tables
+------------------------------------------------------------------------------------------------------------------------
+alter table workers                        -- command 1 (Will not work, because we need to remove the foreign key first)
+drop course_decided;
+
+SELECT
+    CONSTRAINT_NAME, COLUMN_NAME           -- command 2 (Will provide me the name of the foreign key)
+FROM
+    information_schema.KEY_COLUMN_USAGE
+WHERE
+    TABLE_SCHEMA = 'company'
+    AND TABLE_NAME = 'workers'
+    AND CONSTRAINT_NAME <> 'PRIMARY'
+    AND REFERENCED_TABLE_NAME IS NOT NULL;
+
+alter table workers                         -- command 3 (deleting foreign key)
+drop foreign key workers_ibfk_1;
+
+alter table workers                         -- command 4 (deleting course_decided that was receiving the foreign key)
+drop course_decided;
+
+------------------------------------------------------------------------------------------------------------------------
+Additional notes: While using the DBeaver database management software, It is possible to check the name of the foreign
+key, just by clicking on foreign keys in the navigator bar. The command 2 is not necessary for this case, but it is
+important to know without how to do, in case using just the terminal.
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
